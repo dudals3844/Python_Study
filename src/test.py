@@ -1,37 +1,55 @@
-#for
+#function
+def add (a,b):
+    return a + b
 
-test_list = ['one','two','three']
-for i in test_list:
-    print(i)
+def say():
+    print("Hi")
 
-a = [(1,2), (3,4), (5,6)]
-for (first, last) in a:
-    print(first+last)
+a = 1
+b = 2
+c = add(a,b)
+print(c)
+say()
 
+result = add(a=3, b=7)
+print(result)
+
+#if i don't know how many input here
+def add_many(*args):
+    result = 0
+    for i in args:
+        result = result + 1
+    return result
+
+num = add_many(1,2,3,4,5,6,7,8,9,10)
+print(num)#10개 있어서 10 출력
+
+
+#function return always one
+def add_mul(a,b):
+    return a+b , a*b
+result = add_mul(3,4)
+print(result)#tuple return
+
+#declare global variable
+# a = 1
+# def vartest(a):
     
-marks = [90,25,67,45,80]
-number = 0
-for mark in marks:
-    number = number +1
-    if mark < 60:
-        continue
-    print("%d: pass "%number)#print("{0}".format(number))
+#     a = a + 1
+#     return a
+# a = vartest(a)
+# print(a)
 
-#for - range
-add = 0
-for i in range(1,11):#plus 1~10
-    add = add + i
-print(add)
+a = 1 
+def vartest(): 
+    global a
+    a = a + 1
+    
 
-for number in range(len(marks)):
-    if marks[number] < 60:
-        continue
-    print("pass: {0}".format(number))
+vartest() 
+print(a)
 
-
-#for using list
-a = [1,2,3,4]
-result = []
-for num in a:#num에 리스트 한개의 값씩 넣는다
-    result.append(num * 3)
+#lambda
+add = lambda a, b : a+b#same def add(a,b): return a+b
+result = add(1,2)
 print(result)
