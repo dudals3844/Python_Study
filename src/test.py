@@ -1,11 +1,8 @@
-#Module
+#package
 
-import FourCal
-import function 
+#from mod import echo
+from mod.echo import echo_test #relatice path
 
-#import class
-a = FourCal.FourCal(4,2)
-print(a.add())
+#print(echo.echo_test())
 
-#import method
-function.hello()
+print(echo_test())
