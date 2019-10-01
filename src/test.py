@@ -1,10 +1,11 @@
-#Bool type
-a = True
-b = False
-print(type(a))
-print(1 == 1)
+#
+a = [1,2,3]
+b = a[:]
+print(b)
 
-print(bool([1,2,3]))
-print(bool([]))
-print(bool(0))
-print(bool(3))
+#using copy
+from copy import copy
+b = copy(a)# == a[:]
+
+print(b is a)
+
