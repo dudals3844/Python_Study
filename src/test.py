@@ -1,5 +1,45 @@
-#Input
+#Class
 
-number = input("Input the number: ")
+#diff JAVA
+# class FourCal{
+#     int first, second;
+#     public Forcal(int first, int second){
+#         this.first = first;
+#         this.second = second;
+#     }
 
-print(number)
+#     public int add(){
+#         return first+second
+#     }
+
+# }
+
+
+class FourCal:
+    #__init__ 생성자다
+    def __init__(self,first,second):
+        self.first = first
+        self.second = second
+
+    
+    def add(self):#전역변수 받기
+        return self.first + self.second
+
+    def mul(self):
+        return self.first * self.second
+
+    def sub(self):
+        return self.first - self.second
+
+    def div(self):
+        return self.first / self.second
+
+
+#make obj
+a = FourCal(4,2)
+#a.setdata(4,2)
+print(a.add())
+print(a.mul())
+print(a.sub())
+print(a.sub())
+
